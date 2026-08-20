@@ -1,79 +1,138 @@
-import { GraduationCap, Users, Heart } from "lucide-react";
-import SectionHeading from "../common/SectionHeading";
-
-const highlights = [
-  {
-    icon: GraduationCap,
-    title: "Quality Learning",
-    description:
-      "A strong educational foundation for students from Class 1 to Class 8.",
-  },
-  {
-    icon: Users,
-    title: "Student-Centered",
-    description:
-      "We focus on the individual growth and development of every child.",
-  },
-  {
-    icon: Heart,
-    title: "Values & Character",
-    description:
-      "Education that helps students grow with confidence and good values.",
-  },
-];
+import { ArrowRight, HeartHandshake, Sparkles } from "lucide-react";
 
 const SchoolIntroduction = () => {
   return (
-    <section className="bg-white py-20">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <div>
-          <SectionHeading
-            badge="Who We Are"
-            title="A Place Where Young Minds Grow"
-            description="Alliance School is committed to providing a strong academic foundation in a safe, supportive, and inspiring environment."
-            align="left"
-          />
+    <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+      {/* Subtle Background Glow */}
+      <div className="absolute left-[-8rem] top-1/4 h-[28rem] w-[28rem] rounded-full bg-[#2859B8]/[0.035] blur-3xl" />
+      <div className="absolute bottom-[-10rem] right-[-8rem] h-[30rem] w-[30rem] rounded-full bg-[#F59A01]/[0.045] blur-3xl" />
 
-          <p className="text-base leading-8 text-slate-600">
-            We believe that every child has unique abilities and potential. Our
-            approach to education focuses not only on academic learning but also
-            on creativity, confidence, communication, discipline, and overall
-            personality development.
-          </p>
+      {/* Decorative Grid */}
+      <div
+        className="absolute right-[5%] top-16 hidden h-40 w-40 opacity-[0.06] lg:block"
+        style={{
+          backgroundImage: "radial-gradient(#2859B8 1.5px, transparent 1.5px)",
+          backgroundSize: "14px 14px",
+        }}
+      />
 
-          <p className="mt-4 text-base leading-8 text-slate-600">
-            Through dedicated teachers, engaging learning experiences, and a
-            positive school environment, we help students build the foundation
-            they need for a successful future.
-          </p>
+      {/* NEW — Left Side Decorative Background */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-[42%] overflow-hidden">
+        <div className="absolute -left-[22rem] top-1/2 h-[44rem] w-[44rem] -translate-y-1/2 rounded-full border border-[#2859B8]/10" />
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {highlights.map((item) => {
-              const Icon = item.icon;
+        <div className="absolute -left-[17rem] top-1/2 h-[34rem] w-[34rem] -translate-y-1/2 rounded-full border border-[#2859B8]/[0.07]" />
 
-              return (
-                <div key={item.title} className="rounded-xl bg-slate-50 p-4">
-                  <Icon size={24} className="text-blue-600" />
+        <div className="absolute -left-[7rem] bottom-[-8rem] h-64 w-64 rounded-full border-[18px] border-[#F59A01]/[0.08]" />
+      </div>
 
-                  <h3 className="mt-3 text-sm font-semibold text-slate-900">
-                    {item.title}
-                  </h3>
+      {/* Existing code continues exactly as it is */}
 
-                  <p className="mt-2 text-xs leading-5 text-slate-500">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
+      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-24 lg:px-8">
+        {/* ================= CONTENT ================= */}
+        <div className="relative">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3">
+            <span className="h-[2px] w-10 rounded-full bg-[#F59A01]" />
+
+            <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#F59A01]">
+              About Alliance
+            </span>
           </div>
+
+          {/* Heading */}
+          <h2 className="mt-5 max-w-xl text-4xl font-bold leading-[1.12] tracking-[-0.02em] text-[#172554] sm:text-5xl lg:text-[3.35rem]">
+            Building Strong Foundations
+            <span className="mt-1 block text-[#2859B8]">
+              For a Brighter{" "}
+              <span className="relative inline-block text-[#F59A01]">
+                Future.
+                <span className="absolute -bottom-1 left-0 h-[3px] w-full origin-left rounded-full bg-[#F59A01]/25" />
+              </span>
+            </span>
+          </h2>
+
+          {/* Description */}
+          <div className="mt-7 max-w-xl border-l-2 border-[#2859B8]/15 pl-5">
+            <p className="text-base leading-8 text-slate-500 sm:text-[17px]">
+              Alliance International School is committed to providing a safe,
+              nurturing, and inspiring learning environment where every child
+              can discover their potential and grow with confidence.
+            </p>
+
+            <p className="mt-4 text-base leading-8 text-slate-500 sm:text-[17px]">
+              We believe education goes beyond academics—fostering creativity,
+              discipline, values, communication, and the confidence students
+              need to thrive in the future.
+            </p>
+          </div>
+
+          {/* CTA */}
+          <button className="group mt-9 inline-flex items-center gap-3 rounded-xl bg-[#F59A01] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(245,154,1,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#df8800] hover:shadow-[0_18px_40px_rgba(245,154,1,0.3)]">
+            Discover Our School
+            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-white/10 transition-transform duration-300 group-hover:translate-x-1">
+              <ArrowRight size={16} />
+            </span>
+          </button>
         </div>
 
-        <div className="overflow-hidden rounded-3xl">
-          <img
-            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644"
-            alt="Alliance School students"
-            className="h-[450px] w-full object-cover"
-          />
+        {/* ================= IMAGE ================= */}
+        <div className="relative mx-auto w-full max-w-xl lg:mx-0">
+          {/* Large Blue Background Shape */}
+          <div className="absolute -right-5 -top-5 h-[85%] w-[85%] rounded-[2.5rem] bg-[#2859B8]/10 sm:-right-8 sm:-top-8" />
+
+          {/* Orange Offset Frame */}
+          <div className="absolute -bottom-5 -left-5 h-[92%] w-[92%] rounded-[2rem] border-2 border-[#F59A01]/40 sm:-bottom-7 sm:-left-7" />
+
+          {/* Decorative Orange Circle */}
+          <div className="absolute -right-5 bottom-10 z-0 hidden h-20 w-20 rounded-full border-[10px] border-[#F59A01]/20 sm:block" />
+
+          {/* Main Image */}
+          <div className="group relative z-10 aspect-[4/4.5] overflow-hidden rounded-[2rem] shadow-[0_25px_60px_rgba(23,37,84,0.16)]">
+            <img
+              src="https://i.pinimg.com/1200x/da/0b/8a/da0b8a73587be2b85df3a6d62ad22f67.jpg"
+              alt="Students at Alliance International School"
+              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+
+            {/* Soft Image Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#172554]/45 via-transparent to-transparent" />
+
+            {/* Glass Label */}
+            <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/30 bg-white/85 p-4 shadow-lg backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F59A01]/15 text-[#F59A01]">
+                  <Sparkles size={19} />
+                </div>
+
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-[0.14em] text-slate-400">
+                    Learning Beyond
+                  </p>
+
+                  <p className="mt-0.5 font-semibold text-[#172554]">
+                    The Classroom
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Floating Promise Card */}
+          <div className="absolute -right-3 top-10 z-20 hidden rounded-2xl border border-white/10 bg-[#2859B8] p-5 text-white shadow-[0_20px_45px_rgba(40,89,184,0.25)] sm:block lg:-right-8">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
+                <HeartHandshake size={20} className="text-[#F59A01]" />
+              </div>
+
+              <div>
+                <p className="text-lg font-bold">Our Promise</p>
+
+                <p className="mt-0.5 text-xs text-white/65">
+                  Learn. Grow. Achieve.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

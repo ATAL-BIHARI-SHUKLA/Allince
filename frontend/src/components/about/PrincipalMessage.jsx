@@ -1,48 +1,47 @@
 import { Quote } from "lucide-react";
-import SectionHeading from "../common/SectionHeading";
 
 const PrincipalMessage = () => {
   return (
-    <section className="bg-white py-20">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-slate-900 p-6 sm:p-10 lg:p-14">
-          <div className="grid items-center gap-10 md:grid-cols-[220px_1fr]">
-            <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
-                alt="Principal"
-                className="aspect-square w-full object-cover"
-              />
-            </div>
+    <section className="bg-white py-20 sm:py-24">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="grid items-center gap-12 rounded-3xl bg-[#F7F8FC] p-8 sm:p-12 lg:grid-cols-[0.8fr_1.2fr] lg:p-16">
+          {/* Principal Image */}
+          <div className="relative mx-auto w-full max-w-sm">
+            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-[#F59A01]/20" />
 
-            <div>
-              <SectionHeading
-                badge="From the Principal"
-                title="Together, We Shape the Future"
-                align="left"
-              />
+            <img
+              src="/images/school/principal.jpg"
+              alt="Principal of Alliance School"
+              className="relative aspect-[4/5] w-full rounded-2xl object-cover"
+            />
+          </div>
 
-              <Quote size={40} className="text-blue-400" />
+          {/* Message */}
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#F59A01]">
+              Principal's Message
+            </span>
 
-              <p className="mt-4 leading-8 text-slate-300">
-                Our goal is to create an environment where children feel
-                confident to ask questions, explore their interests, learn from
-                their experiences, and discover their unique strengths.
+            <Quote
+              size={42}
+              className="mt-5 text-[#2859B8]/20"
+              fill="currentColor"
+            />
+
+            <p className="mt-2 text-lg leading-9 text-slate-600 sm:text-xl">
+              Our goal is to provide every child with an environment where they
+              feel safe, valued, inspired, and confident enough to explore their
+              full potential.
+            </p>
+
+            <div className="mt-8">
+              <h3 className="text-lg font-bold text-[#172554]">
+                Principal Name
+              </h3>
+
+              <p className="mt-1 text-sm text-[#F59A01]">
+                Principal, Alliance School
               </p>
-
-              <p className="mt-4 leading-8 text-slate-300">
-                With the support of parents and teachers, we can help every
-                student build the knowledge, values, and confidence needed for a
-                successful future.
-              </p>
-
-              <div className="mt-6">
-                <h3 className="font-semibold text-white">Principal Name</h3>
-
-                <p className="mt-1 text-sm text-blue-400">
-                  Principal, Alliance School
-                </p>
-              </div>
             </div>
           </div>
         </div>
