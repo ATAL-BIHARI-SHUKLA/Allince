@@ -1,66 +1,45 @@
-import { CalendarDays, School } from "lucide-react";
-import SectionHeading from "../common/SectionHeading";
-
-const timeline = [
-  {
-    year: "2015",
-    title: "The Beginning",
-    description:
-      "Alliance School began with a vision to provide quality education and strong values to young learners.",
-  },
-  {
-    year: "2018",
-    title: "Growing Together",
-    description:
-      "The school expanded its academic programs and created more opportunities for student development.",
-  },
-  {
-    year: "2022",
-    title: "Modern Learning",
-    description:
-      "New learning methods, activities, and improved facilities were introduced to support better education.",
-  },
-  {
-    year: "Today",
-    title: "Moving Forward",
-    description:
-      "Alliance School continues to focus on academic excellence, creativity, character, and student success.",
-  },
-];
-
 const SchoolHistory = () => {
   return (
-    <section className="bg-slate-50 py-20">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Our Journey"
-          title="Growing With Every Generation"
-          description="Our journey is built on a commitment to education, continuous improvement, and the success of our students."
-        />
+    <section className="bg-[#F7F8FC] py-20 sm:py-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-24 lg:px-8">
+        {/* Content */}
+        <div>
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#F59A01]">
+            Our Journey
+          </span>
 
-        <div className="relative mt-12 space-y-8 border-l-2 border-blue-100 pl-8 md:pl-12">
-          {timeline.map((item) => (
-            <div key={item.year} className="relative">
-              <div className="absolute -left-[45px] flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white md:-left-[61px]">
-                <School size={16} />
-              </div>
+          <h2 className="mt-4 text-3xl font-bold leading-tight text-[#172554] sm:text-4xl">
+            Growing Together Through the Years
+          </h2>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-6">
-                <div className="flex items-center gap-2 text-sm font-semibold text-blue-600">
-                  <CalendarDays size={16} />
-                  {item.year}
-                </div>
+          <p className="mt-6 leading-8 text-slate-500">
+            Alliance School was established with a vision to make quality
+            education accessible and meaningful for every child.
+          </p>
 
-                <h3 className="mt-3 text-xl font-semibold text-slate-900">
-                  {item.title}
-                </h3>
+          <p className="mt-4 leading-8 text-slate-500">
+            Over the years, our school has continued to grow as a learning
+            community built on trust, dedication, discipline, and a commitment
+            to student success.
+          </p>
 
-                <p className="mt-3 leading-7 text-slate-600">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
+          <div className="mt-8 border-l-2 border-[#F59A01] pl-5">
+            <p className="text-sm font-medium leading-7 text-[#172554]">
+              "Education is not just about learning subjects, but about
+              preparing children for life."
+            </p>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div className="relative">
+          <div className="absolute -right-5 -top-5 h-full w-full rounded-2xl bg-[#2859B8]/10" />
+
+          <img
+            src="/images/school/school-history.jpg"
+            alt="Alliance School journey"
+            className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-xl"
+          />
         </div>
       </div>
     </section>
