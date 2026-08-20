@@ -16,7 +16,7 @@ const SchoolIntroduction = () => {
         }}
       />
 
-      {/* NEW — Left Side Decorative Background */}
+      {/* Left Side Decorative Background */}
       <div className="pointer-events-none absolute left-0 top-0 h-full w-[42%] overflow-hidden">
         <div className="absolute -left-[22rem] top-1/2 h-[44rem] w-[44rem] -translate-y-1/2 rounded-full border border-[#2859B8]/10" />
 
@@ -24,8 +24,6 @@ const SchoolIntroduction = () => {
 
         <div className="absolute -left-[7rem] bottom-[-8rem] h-64 w-64 rounded-full border-[18px] border-[#F59A01]/[0.08]" />
       </div>
-
-      {/* Existing code continues exactly as it is */}
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-24 lg:px-8">
         {/* ================= CONTENT ================= */}
@@ -39,14 +37,12 @@ const SchoolIntroduction = () => {
             </span>
           </div>
 
-          {/* Heading */}
+          {/* Heading - GRADIENT UPDATED HERE */}
           <h2 className="mt-5 max-w-xl text-4xl font-bold leading-[1.12] tracking-[-0.02em] text-[#172554] sm:text-5xl lg:text-[3.35rem]">
             Building Strong Foundations
-            <span className="mt-1 block text-[#2859B8]">
-              For a Brighter{" "}
-              <span className="relative inline-block text-[#F59A01]">
-                Future.
-                <span className="absolute -bottom-1 left-0 h-[3px] w-full origin-left rounded-full bg-[#F59A01]/25" />
+            <span className="mt-1 block">
+              <span className="bg-gradient-to-r from-[#2859B8] to-[#F59A01] bg-clip-text text-transparent">
+                For a Brighter Future.
               </span>
             </span>
           </h2>
