@@ -37,7 +37,7 @@ const CoreValues = () => {
       {/* ================= BACKGROUND GLOWS ================= */}
 
       {/* Strong Blue Glow - Left Side */}
-      <div className="pointer-events-none absolute -left-48 top-1/2 h-[42rem] w-[42rem] -translate-y-1/2 rounded-full bg-[#2859B8]/10 blur-[110px]" />
+      <div className="pointer-events-none absolute -left-48 top-1/2 h-[42rem] w-[42rem] -translate-y-1/2 rounded-full bg-[#F59A01]/10 blur-[110px]" />
 
       {/* Small Blue Secondary Glow */}
       <div className="pointer-events-none absolute -left-20 top-12 h-72 w-72 rounded-full bg-[#2859B8]/[0.08] blur-[80px]" />
@@ -51,7 +51,7 @@ const CoreValues = () => {
 
       {/* Large Blue Angular Shape */}
       <div
-        className="pointer-events-none absolute -left-32 top-20 h-[26rem] w-[22rem] bg-[#2859B8]/[0.07]"
+        className="pointer-events-none absolute -left-32 top-20 h-[26rem] w-[22rem] bg-[#F59A01]/[0.07]"
         style={{
           clipPath: "polygon(0 0, 75% 8%, 100% 28%, 82% 100%, 0 88%)",
         }}
